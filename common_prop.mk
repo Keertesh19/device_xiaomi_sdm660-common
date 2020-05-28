@@ -59,6 +59,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.fm.a2dp.conc.disabled=true \
     vendor.voice.path.for.pcm.voip=true
 
+# Fm
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.fm.transmitter=false \
+    vendor.hw.fm.init=0
+
 # Audio Feature
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.feature.a2dp_offload.enable=false \
