@@ -298,11 +298,22 @@ PRODUCT_PACKAGES += \
     init.qcom.sh \
     init.qcom.usb.rc \
     init.qcom.usb.sh \
-    init.qti.fm.sh \
     init.recovery.qcom.rc \
     init.target.rc \
     init.xiaomi_parts.rc \
     ueventd.qcom.rc
+
+# FM
+ifeq ($(BOARD_HAVE_QCOM_FM),true)
+PRODUCT_PACKAGES += \
+    FM2 \
+    libqcomfm_jni \
+    qcom.fmradio \
+    qcom.fmradio.xml
+    
+PRODUCT_BOOT_JARS += \
+    qcom.fmradio
+endif
 
 # Insmod files
 PRODUCT_COPY_FILES += \
